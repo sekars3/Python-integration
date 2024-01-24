@@ -13,4 +13,5 @@ def reverse_num(num):
         rev_num = rev_num*10 + reminder
         temp_num = temp_num//10
         reminder = temp_num%10
+        
     return rev_num
