@@ -1,0 +1,3 @@
+"ABW","Aruba"
+"AFG","Afghanistan"
+"AGO","Angola"
