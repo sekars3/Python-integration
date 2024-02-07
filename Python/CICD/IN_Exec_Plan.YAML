@@ -1,0 +1,16 @@
+project: KINAXIS_CPT
+ep_label: plan_Kinaxis_Demo
+ep_description: Kinaxis Demo
+ep_pause_on_error: false
+schedule_enabled: true
+schedule_expression: cron()
+sequential:
+  - label: d_task_job_1
+    condition: on_ok
+  - label: d_task_job_2
+    condition: on_ok
+  - label: d_task_job_3
+    condition: on_ok
+parallel:
+  - label: d_task_job_p1
+  - label: d_task_job_p2
