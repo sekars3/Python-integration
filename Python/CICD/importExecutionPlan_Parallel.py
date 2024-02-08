@@ -5,29 +5,21 @@ with open(r"IN_Exec_Plan.yaml") as f:
     data = yaml.load(f, Loader=yaml.SafeLoader)
 
 # Print the values as a dictionary
-print(data['sequential'][0]['label'])
+print(data['parallel'][0]['label'])
 filename = "impEP_" + data['ep_label'] + ".json"
 
 # Task details
 child_parts = []
-plans = data['sequential']
-for i in range(1, len(plans)):
-    partType = plans[i]['condition'].upper()
-    planPartTaskId = plans[i]['label']
+plans = data['parallel']
+for plan in plans:
 
-    # creat the current child part
+    # create the current child part
     child_part = {
-        "partType": partType,
-        "planPartTaskId": planPartTaskId
+        "partType": "PARALLEL",
+        "planPartTaskId": plan['label']
     }
-    if i == 0:
-        child_parts.append(child_part)
-    elif partType == "PARALLEL":
-        child_parts.append(child_part)
-    else:
-        child_part_nested = [child_part]
-        child_parts_nested = {"childParts": child_part_nested}
-        child_parts.append(child_parts_nested)
+
+    child_parts.append(child_part)
 
 
 # Plan details
@@ -39,7 +31,9 @@ dict_plan_det = {
     "pauseOnError": "true",
     "planParts": {
         "childParts": child_parts,
-        "planPartTaskId": plans[0]['label']}
+        "planId": data['ep_label'],
+        "useParalle": True,
+        "partType": "NONE",}
 }
 
 # Adding nested element

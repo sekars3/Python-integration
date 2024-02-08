@@ -1,0 +1,26 @@
+{
+  "project": "KINAXIS_CPT",
+  "ep_label": "Exec_Plan_Test_Seq",
+  "ep_description": "Import Plan Test Sequential",
+  "ep_pause_on_error": "False",
+  "schedule_enabled": "True",
+  "schedule_expression": "cron()",
+  "sequential": [
+    {
+      "label": "D_task_Admin_Generate_Encrypted_Password",
+      "condition": "none"
+    },
+    {
+      "label": "D_task_Admin_mc4_Archive_Files",
+      "condition": "on_ok"
+    },
+    {
+      "label": "D_task_Admin_load_Contexts",
+      "condition": "on_ok"
+    },
+    {
+      "label": "D_task_Admin_mc4_Cleanup_Archive",
+      "condition": "on_ok"
+    }
+  ]
+}

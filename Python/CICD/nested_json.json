@@ -1,0 +1,32 @@
+{
+    "planParts": {
+        "childParts": [
+            {
+                "partType": "NONE",
+                "planPartTaskId": "D_task_1",
+                "useParalle": false,
+                "childParts": [
+                    {
+                        "partType": "ON_OK",
+                        "planPartTaskId": "D_task_2",
+                        "useParalle": false,
+                        "childParts": [
+                            {
+                                "partType": "ON_OK",
+                                "planPartTaskId": "D_task_3",
+                                "useParalle": false,
+                                "childParts": [
+                                    {
+                                        "partType": "ON_OK",
+                                        "planPartTaskId": "D_task_4",
+                                        "useParalle": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+project: KINAXIS_CPT
+ep_label: Exec_Plan_Test_Parallel
+ep_description: Import Plan Test Parallel
+ep_pause_on_error: false
+schedule_enabled: true
+schedule_expression: cron()
+parallel:
+  - label: D_task_Admin_Generate_Encrypted_Password
+  - label: D_task_Admin_mc4_Archive_Files
+  - label: D_task_Admin_load_Contexts
+  - label: D_task_Admin_mc4_Cleanup_Archive
+  
