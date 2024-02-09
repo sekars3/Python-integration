@@ -1,0 +1,65 @@
+{
+    "actionName": "importExecutionPlan",
+    "authPass": "admin",
+    "authUser": "admin@company.com",
+    "result": {
+        "ExecutionPlan": [
+            {
+                "desc": "Import Plan Test",
+                "execPlanRollBack": "test1",
+                "execPlanTimeOut": "1000",
+                "label": "Exec_Plan_Test",
+                "pauseOnError": "true",
+                "planParts": {
+                    "childParts": [
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Custom_Kinaxis_SAPECC_Transform_Part_BT_MC4"
+                        },
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive"
+                        },
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Admin_x39_Cleanup_Archive"
+                        },
+                        {
+                            "childParts": [
+                                {
+                                    "partType": "ON_OK",
+                                    "planPartTaskId": "D_task_Admin_mc4_Archive_Files",
+                                    "useParalle": false,
+                                    "childParts": [
+                                        {
+                                            "partType": "ON_ERROR",
+                                            "planPartTaskId": "D_task_Admin_xtt_Archive_Files",
+                                            "useParalle": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "childParts": [
+                                {
+                                    "partType": "PARALLEL",
+                                    "planPartTaskId": "D_task_Admin_xtt_Archive_Files"
+                                },
+                                {
+                                    "partType": "PARALLEL",
+                                    "planPartTaskId": "D_task_Admin_Q6B_Archive_Files"
+                                }
+                            ],
+                            "useParalle": true,
+                            "partType": "NONE"
+                        }
+                    ],
+                    "planId": "Exec_Plan_Test",
+                    "useParalle": true,
+                    "partType": "NONE"
+                }
+            }
+        ]
+    }
+}

@@ -1,39 +1,39 @@
 {
-  "actionName": "importExecutionPlan",
-  "authPass": "admin",
-  "authUser": "admin@company.com",
-  "result": {
-    "ExecutionPlan": [
-      {
-        "desc": "Import Plan Test Parallel",
-        "execPlanRollBack": "test1",
-        "execPlanTimeOut": "1000",
-        "label": "Exec_Plan_Test_Parallel",
-        "pauseOnError": "true",
-        "planParts": {
-          "childParts": [
+    "actionName": "importExecutionPlan",
+    "authPass": "Sepadesso@2023",
+    "authUser": "SOS9KOR",
+    "result": {
+        "ExecutionPlan": [
             {
-              "partType": "PARALLEL",
-              "planPartTaskId": "D_task_Admin_Generate_Encrypted_Password"
-            },
-            {
-              "partType": "PARALLEL",
-              "planPartTaskId": "D_task_Admin_mc4_Archive_Files"
-            },
-            {
-              "partType": "PARALLEL",
-              "planPartTaskId": "D_task_Admin_load_Contexts"
-            },
-            {
-              "partType": "PARALLEL",
-              "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive"
+                "desc": "Import Plan Test Parallel",
+                "execPlanRollBack": "test1",
+                "execPlanTimeOut": "1000",
+                "label": "Exec_Plan_Test_Parallel",
+                "pauseOnError": "true",
+                "planParts": {
+                    "childParts": [
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Admin_Generate_Encrypted_Password"
+                        },
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Admin_mc4_Archive_Files"
+                        },
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Admin_load_Contexts"
+                        },
+                        {
+                            "partType": "PARALLEL",
+                            "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive"
+                        }
+                    ],
+                    "planId": "Exec_Plan_Test_Parallel",
+                    "useParalle": true,
+                    "partType": "NONE"
+                }
             }
-          ],
-          "planId": "Exec_Plan_Test_Parallel",
-          "useParalle": true,
-          "partType": "NONE"
-        }
-      }
-    ]
-  }
+        ]
+    }
 }

@@ -1,46 +1,42 @@
 {
-  "actionName": "importExecutionPlan",
-  "authPass": "admin",
-  "authUser": "admin@company.com",
-  "result": {
-    "ExecutionPlan": [
-      {
-        "desc": "Import Plan Test Sequential",
-        "execPlanRollBack": "test1",
-        "execPlanTimeOut": "1000",
-        "label": "Exec_Plan_Test_Seq",
-        "pauseOnError": "true",
-        "planParts": {
-          "childParts": [
+    "actionName": "importExecutionPlan",
+    "authPass": "admin",
+    "authUser": "admin@company.com",
+    "result": {
+        "ExecutionPlan": [
             {
-              "partType": "NONE",
-              "planPartTaskId": "D_task_Admin_Generate_Encrypted_Password",
-              "useParalle": false,
-              "childParts": [
-                {
-                  "partType": "ON_OK",
-                  "planPartTaskId": "D_task_Admin_mc4_Archive_Files",
-                  "useParalle": false,
-                  "childParts": [
-                    {
-                      "partType": "ON_OK",
-                      "planPartTaskId": "D_task_Admin_load_Contexts",
-                      "useParalle": false,
-                      "childParts": [
+                "desc": "Import Plan Test Sequential",
+                "execPlanRollBack": "test1",
+                "execPlanTimeOut": "1000",
+                "label": "Exec_Plan_Test_Seq",
+                "pauseOnError": "true",
+                "planParts": {
+                    "childParts": [
                         {
-                          "partType": "ON_OK",
-                          "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive",
-                          "useParalle": false
+                            "partType": "ON_OK",
+                            "planPartTaskId": "D_task_Admin_mc4_Archive_Files",
+                            "useParalle": false,
+                            "childParts": [
+                                {
+                                    "partType": "ON_OK",
+                                    "planPartTaskId": "D_task_Admin_load_Contexts",
+                                    "useParalle": false,
+                                    "childParts": [
+                                        {
+                                            "partType": "ON_OK",
+                                            "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive",
+                                            "useParalle": false
+                                        }
+                                    ]
+                                }
+                            ]
                         }
-                      ]
-                    }
-                  ]
+                    ],
+                    "partType": "NONE",
+                    "planPartTaskId": "D_task_Admin_Generate_Encrypted_Password",
+                    "useParalle": false
                 }
-              ]
             }
-          ]
-        }
-      }
-    ]
-  }
+        ]
+    }
 }

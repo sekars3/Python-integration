@@ -1,11 +1,9 @@
 import json
 import yaml
 
-with open(r"IN_Exec_Plan.yaml") as f:
+with open(r"IN_Exec_Plan_Parallel.yaml") as f:
     data = yaml.load(f, Loader=yaml.SafeLoader)
 
-# Print the values as a dictionary
-print(data['parallel'][0]['label'])
 filename = "impEP_" + data['ep_label'] + ".json"
 
 # Task details
@@ -33,7 +31,7 @@ dict_plan_det = {
         "childParts": child_parts,
         "planId": data['ep_label'],
         "useParalle": True,
-        "partType": "NONE",}
+        "partType": "NONE"}
 }
 
 # Adding nested element
@@ -45,4 +43,4 @@ dict_plan = {
 }
 
 with open(filename, "w") as outfile:
-    json.dump(dict_plan, outfile)
+    json.dump(dict_plan, outfile, indent=4)

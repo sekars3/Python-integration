@@ -1,47 +1,36 @@
 import json
 import yaml
+from CICD.import_plan_json import create_parallel_json, create_nested_json, create_plan_parts
 
-with open(r"C:\Users\SSLTP11522\OneDrive - SightSpectrum Technology Solutions Pvt. "
-          r"Ltd\Documents\Python\Talend_CICD\IN_Exec_Plan.yaml") as f:
+with open(r"IN_Exec_Plan.yaml") as f:
     data = yaml.load(f, Loader=yaml.SafeLoader)
 
+with open("yaml_source.json", "w") as outfile:
+    json.dump(data, outfile, indent=4)
+
 # Print the values as a dictionary
-print(data['sequential'][0]['label'])
+# print(data)
 filename = "impEP_" + data['ep_label'] + ".json"
 
-# Task details
-child_parts = []
-plans = data['sequential']
-for i in range(1, len(plans)):
-    partType = plans[i]['condition'].upper()
-    planPartTaskId = plans[i]['label']
+# Initializing planParts dictionary
+# planParts = create_plan_parts(data)
 
-    # creat the current child part
-    child_part = {
-        "partType": partType,
-        "planPartTaskId": planPartTaskId
-    }
-    if i == 0:
-        child_parts.append(child_part)
-    elif partType == "PARALLEL":
-        child_parts.append(child_part)
-    else:
-        child_part_nested = [child_part]
-        child_parts_nested = {"childParts": child_part_nested}
-        child_parts.append(child_parts_nested)
+planParts = create_plan_parts(data)
 
+planParts["planId"] = data['ep_label']
+planParts["useParalle"] = True
+planParts["partType"] = "NONE"
 
-# Plan details
+# Plan details)
 dict_plan_det = {
     "desc": data['ep_description'],
     "execPlanRollBack": "test1",
     "execPlanTimeOut": "1000",
     "label": data['ep_label'],
-    "pauseOnError": "true",
-    "planParts": {
-        "childParts": child_parts,
-        "planPartTaskId": plans[0]['label']}
+    "pauseOnError": "true"
 }
+
+dict_plan_det["planParts"] = planParts
 
 # Adding nested element
 dict_plan = {
@@ -52,4 +41,4 @@ dict_plan = {
 }
 
 with open(filename, "w") as outfile:
-    json.dump(dict_plan, outfile)
+    json.dump(dict_plan, outfile, indent=4)

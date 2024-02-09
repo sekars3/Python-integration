@@ -1,16 +1,21 @@
 project: KINAXIS_CPT
-ep_label: plan_Kinaxis_Demo
-ep_description: Kinaxis Demo
+ep_label: Exec_Plan_Test
+ep_description: Import Plan Test
 ep_pause_on_error: false
 schedule_enabled: true
 schedule_expression: cron()
-sequential:
-  - label: d_task_job_1
-    condition: on_ok
-  - label: d_task_job_2
-    condition: on_ok
-  - label: d_task_job_3
-    condition: on_ok
-parallel:
-  - label: d_task_job_p1
-  - label: d_task_job_p2
+root:
+    - parallel:
+        - label: D_task_Custom_Kinaxis_SAPECC_Transform_Part_BT_MC4
+        - label: D_task_Admin_mc4_Cleanup_Archive
+        - label: D_task_Admin_x39_Cleanup_Archive
+on_ok:
+    - sequential:
+        - label: D_task_Admin_mc4_Archive_Files
+          condition: on_ok
+        - label: D_task_Admin_xtt_Archive_Files
+          condition: on_error
+on_error:
+    - parallel:
+        - label: D_task_Admin_xtt_Archive_Files
+        - label: D_task_Admin_Q6B_Archive_Files
