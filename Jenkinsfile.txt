@@ -1,10 +1,10 @@
+import groovy.json.JsonSlurper
 pipeline {
    agent { label 'master' }
    stages {
        stage('read') {
            steps {
                script {
-			       import groovy.json.JsonSlurper
 				   def jsonSlurper = new JsonSlurper()
                    def data = readFile(file: 'listExecutionPlans.json')
 				   def config = jsonSlurper.parseText(data)
