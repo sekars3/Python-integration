@@ -4,6 +4,8 @@ pipeline {
        stage('read') {
            steps {
                script {
+			       import groovy.json.JsonSlurper
+				   def jsonSlurper = new JsonSlurper()
                    def data = readFile(file: 'listExecutionPlans.json')
 				   def config = jsonSlurper.parseText(data)
 				   def duration = config.executionTime.millis
