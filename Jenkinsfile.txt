@@ -5,7 +5,9 @@ pipeline {
            steps {
                script {
                    def data = readFile(file: 'listExecutionPlans.json')
-                   println(data.executionTime.millis)
+				   def config = jsonSlurper.parseText(data)
+				   def duration = config.executionTime.millis
+                   println(duration)
                }
            }
        }
