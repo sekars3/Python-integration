@@ -1,0 +1,1770 @@
+{
+  "executionTime": {
+    "millis": 401,
+    "seconds": 0
+  },
+  "result": {
+    "ExecutionPlan": [
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 423,
+        "label": "Onhand_job",
+        "pauseOnError": "false",
+        "planId": 1762,
+        "planPrms": [],
+        "requestId": "1695626760077_Iy4O1",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "RawHDA - PT/Q13",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 73,
+        "label": "Q_plan_Kinaxis_CPT_rawHDA_Q13",
+        "pauseOnError": "false",
+        "planId": 671,
+        "planParts": {
+          "childParts": [
+            {
+              "endDate": "2024-02-02 20:56:16.156",
+              "parentId": 46,
+              "partJobPrms": [],
+              "partRequestId": "1706893808995_DFDVG",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q13",
+              "planPartId": 62,
+              "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_PT_Q13_rawHDA",
+              "startDate": "2024-02-02 18:10:09.013",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-02 18:10:08.938",
+          "partJobPrms": [],
+          "partRequestId": "1706889600216_1gIhy",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q13",
+          "planPartId": 46,
+          "planPartTaskId": "Q_task_rawHDA_010_SAPECC_Extract_RedLake_PT_Q13",
+          "startDate": "2024-02-02 17:00:00.233",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1706889600049_LzeTD",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "RawHDA - Q6B",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 68,
+        "label": "Q_plan_Kinaxis_CPT_rawHDA_Q6B",
+        "pauseOnError": "false",
+        "planId": 666,
+        "planParts": {
+          "childParts": [
+            {
+              "endDate": "2023-11-28 06:01:06.449",
+              "parentId": 41,
+              "partJobPrms": [],
+              "partRequestId": "1701147628309_HM4Cy",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q6B",
+              "planPartId": 361,
+              "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CPT_Q6B_RawHDA",
+              "startDate": "2023-11-28 06:00:28.329",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2023-11-28 06:00:28.249",
+          "partJobPrms": [],
+          "partRequestId": "1701147600129_06oLr",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q6B",
+          "planPartId": 41,
+          "planPartTaskId": "Q_task_rawHDA_010_SAPECC_Extract_RedLake_CPT_Q6B",
+          "startDate": "2023-11-28 06:00:00.152",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1701147600055_ACZm7",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "BT/MC4",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 109,
+        "label": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+        "pauseOnError": "false",
+        "planId": 741,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "childParts": [
+                            {
+                              "childParts": [
+                                {
+                                  "childParts": [
+                                    {
+                                      "childParts": [
+                                        {
+                                          "endDate": "2024-02-07 04:58:27.271",
+                                          "parentId": 181,
+                                          "partJobPrms": [],
+                                          "partRequestId": "1707277338440_atTUI",
+                                          "partStatus": "ON_OK_ENDED",
+                                          "partType": "ON_OK",
+                                          "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                                          "planPartId": 341,
+                                          "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_BT_MC4_DEV05",
+                                          "startDate": "2024-02-07 04:42:18.459",
+                                          "useParalle": false
+                                        }
+                                      ],
+                                      "endDate": "2024-02-07 04:42:18.374",
+                                      "parentId": 862,
+                                      "partJobPrms": [],
+                                      "partRequestId": "1707276405564_ITtRB",
+                                      "partStatus": "ON_OK_ENDED",
+                                      "partType": "ON_OK",
+                                      "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                                      "planPartId": 181,
+                                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_BT_MC4",
+                                      "startDate": "2024-02-07 04:26:45.583",
+                                      "useParalle": false
+                                    }
+                                  ],
+                                  "endDate": "2024-02-07 04:26:45.491",
+                                  "parentId": 128,
+                                  "partJobPrms": [],
+                                  "partRequestId": "1707276385385_YoNN7",
+                                  "partStatus": "ON_OK_ENDED",
+                                  "partType": "ON_OK",
+                                  "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                                  "planPartId": 862,
+                                  "planPartTaskId": "D_task_Custom_Kinaxis_SAPECC_Transform_Part_BT_MC4",
+                                  "startDate": "2024-02-07 04:26:25.401",
+                                  "useParalle": false
+                                }
+                              ],
+                              "endDate": "2024-02-07 04:26:25.335",
+                              "parentId": 127,
+                              "partJobPrms": [],
+                              "partRequestId": "1707275245504_ydsya",
+                              "partStatus": "ON_OK_ENDED",
+                              "partType": "ON_OK",
+                              "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                              "planPartId": 128,
+                              "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Transform_BT_MC4",
+                              "startDate": "2024-02-07 04:07:25.526",
+                              "useParalle": false
+                            }
+                          ],
+                          "endDate": "2024-02-07 04:07:25.42",
+                          "parentId": 126,
+                          "partJobPrms": [],
+                          "partRequestId": "1707275100922_YpJnH",
+                          "partStatus": "ON_OK_ENDED",
+                          "partType": "ON_OK",
+                          "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                          "planPartId": 127,
+                          "planPartTaskId": "D_task_Custom_SAPECC_RemoveLeading_Zeroes_BT_MC4",
+                          "startDate": "2024-02-07 04:05:00.94",
+                          "useParalle": false
+                        }
+                      ],
+                      "endDate": "2024-02-07 04:05:00.866",
+                      "parentId": 861,
+                      "partJobPrms": [],
+                      "partRequestId": "1707275000567_sy60x",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                      "planPartId": 126,
+                      "planPartTaskId": "D_task_Generic_CIFS_TO_NFS_SFTP_BT_MC4",
+                      "startDate": "2024-02-07 04:03:20.582",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 04:03:20.511",
+                  "parentId": 782,
+                  "partJobPrms": [],
+                  "partRequestId": "1707274878110_8BUwA",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+                  "planPartId": 861,
+                  "planPartTaskId": "D_task_Custom_Kinaxis_SAPECC_Extract_Part_BT_MC4",
+                  "startDate": "2024-02-07 04:01:18.129",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 04:01:18.04",
+              "parentId": 125,
+              "partJobPrms": [],
+              "partRequestId": "1707261330301_wooOp",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+              "planPartId": 782,
+              "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Extract_BT_MC4",
+              "startDate": "2024-02-07 00:15:30.319",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 00:15:30.238",
+          "partJobPrms": [],
+          "partRequestId": "1707261300127_MvZsc",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_Kinaxis_CPT_BT_MC4",
+          "planPartId": 125,
+          "planPartTaskId": "P_task_Custom_SAPECC_PC4_RawHDA_Transfer_BT_MC4",
+          "startDate": "2024-02-07 00:15:00.143",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707261300078_qYKeU",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "TT/XTT",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 114,
+        "label": "D_plan_Generic_Kinaxis_CPT_TT_XTT",
+        "pauseOnError": "false",
+        "planId": 746,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-07 04:50:25.574",
+                      "parentId": 131,
+                      "partJobPrms": [],
+                      "partRequestId": "1707276384653_FzkpM",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_Kinaxis_CPT_TT_XTT",
+                      "planPartId": 132,
+                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_TT_XTT",
+                      "startDate": "2024-02-07 04:26:24.68",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 04:26:24.592",
+                  "parentId": 130,
+                  "partJobPrms": [],
+                  "partRequestId": "1707274777566_kbxQH",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_Kinaxis_CPT_TT_XTT",
+                  "planPartId": 131,
+                  "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Transform_TT_XTT",
+                  "startDate": "2024-02-07 03:59:37.592",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 03:59:37.492",
+              "parentId": 129,
+              "partJobPrms": [],
+              "partRequestId": "1707274504685_KNpbr",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_Kinaxis_CPT_TT_XTT",
+              "planPartId": 130,
+              "planPartTaskId": "D_task_Generic_CIFS_TO_NFS_SFTP_TT_XTT",
+              "startDate": "2024-02-07 03:55:04.703",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 03:55:04.622",
+          "partJobPrms": [],
+          "partRequestId": "1707273000129_Yrzpu",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_Kinaxis_CPT_TT_XTT",
+          "planPartId": 129,
+          "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Extract_TT_XTT",
+          "startDate": "2024-02-07 03:30:00.146",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707273000058_M8MjH",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "CPT/Q8B",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 779,
+        "label": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q8B",
+        "pauseOnError": "false",
+        "planId": 2669,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "endDate": "2024-02-07 10:51:56.883",
+                          "parentId": 528,
+                          "partJobPrms": [],
+                          "partRequestId": "1707299494779_efFvU",
+                          "partStatus": "ON_OK_ENDED",
+                          "partType": "ON_OK",
+                          "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q8B",
+                          "planPartId": 529,
+                          "planPartTaskId": "Q_task_Generic_SAP_HANA_ODATA_MMSA_POST_API_CPT_Q8B",
+                          "startDate": "2024-02-07 10:51:34.796",
+                          "useParalle": false
+                        }
+                      ],
+                      "endDate": "2024-02-07 10:51:34.729",
+                      "parentId": 527,
+                      "partJobPrms": [],
+                      "partRequestId": "1707299472629_unCKa",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q8B",
+                      "planPartId": 528,
+                      "planPartTaskId": "Q_task_Generic_SAP_HANA_ODATA_MMSA_Payload_File_Creation_CPT_Q8B",
+                      "startDate": "2024-02-07 10:51:12.648",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 10:51:12.568",
+                  "parentId": 526,
+                  "partJobPrms": [],
+                  "partRequestId": "1707299450469_yLtdb",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q8B",
+                  "planPartId": 527,
+                  "planPartTaskId": "Q_task_Generic_SAP_HANA_ODATA_PTF_POST_API_CPT_Q8B",
+                  "startDate": "2024-02-07 10:50:50.487",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 10:50:50.403",
+              "parentId": 525,
+              "partJobPrms": [],
+              "partRequestId": "1707299428290_WDX5J",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q8B",
+              "planPartId": 526,
+              "planPartTaskId": "Q_task_Generic_SAP_HANA_ODATA_PTF_Payload_File_Creation_CPT_Q8B",
+              "startDate": "2024-02-07 10:50:28.308",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 10:50:28.23",
+          "partJobPrms": [],
+          "partRequestId": "1707299400112_gyppb",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q8B",
+          "planPartId": 525,
+          "planPartTaskId": "Q_task_Generic_SAPECC_SFTP_RapidResponse_ClosedLoop_CPT_Q8B",
+          "startDate": "2024-02-07 10:50:00.13",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707299400054_fqbcz",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "CPT/Q6B",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 102,
+        "label": "D_plan_Generic_Kinaxis_CPT_CPT_Q6B",
+        "pauseOnError": "false",
+        "planId": 719,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "endDate": "2023-11-06 08:15:05.177",
+                          "parentId": 163,
+                          "partJobPrms": [],
+                          "partRequestId": "1699254241321_HH9xf",
+                          "partStatus": "ON_OK_ENDED",
+                          "partType": "ON_OK",
+                          "planId": "D_plan_Generic_Kinaxis_CPT_CPT_Q6B",
+                          "planPartId": 421,
+                          "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CPT_Q6B",
+                          "startDate": "2023-11-06 08:04:01.338",
+                          "useParalle": false
+                        }
+                      ],
+                      "endDate": "2023-11-06 08:04:01.253",
+                      "parentId": 162,
+                      "partJobPrms": [],
+                      "partRequestId": "1699254146909_lisDM",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_Kinaxis_CPT_CPT_Q6B",
+                      "planPartId": 163,
+                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_CPT_Q6B",
+                      "startDate": "2023-11-06 08:02:26.946",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2023-11-06 09:02:26.827",
+                  "parentId": 161,
+                  "partJobPrms": [],
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_Kinaxis_CPT_CPT_Q6B",
+                  "planPartId": 162,
+                  "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Transform_CPT_Q6B",
+                  "startDate": "2023-11-06 09:01:38.668",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2023-11-06 08:01:38.566",
+              "parentId": 106,
+              "partJobPrms": [],
+              "partRequestId": "1699254060421_xzNrd",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_Kinaxis_CPT_CPT_Q6B",
+              "planPartId": 161,
+              "planPartTaskId": "D_task_Generic_Kinaxis_CIFS_TO_NFS_SFTP_CPT_Q6B",
+              "startDate": "2023-11-06 08:01:00.442",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2023-11-06 08:01:00.344",
+          "partJobPrms": [],
+          "partRequestId": "1699254000136_RV1aA",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_Kinaxis_CPT_CPT_Q6B",
+          "planPartId": 106,
+          "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Extract_CPT_Q6B",
+          "startDate": "2023-11-06 08:00:00.168",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1699254000064_kGuUb",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "Execution plan for Kinaxis_HC S1T",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 139,
+        "label": "D_plan_Generic_Kinaxis_CPT_HC_S1T",
+        "pauseOnError": "false",
+        "planId": 1001,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2023-12-15 11:13:09.909",
+                      "parentId": 223,
+                      "partJobPrms": [],
+                      "partRequestId": "1702634533306_itk6q",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_Kinaxis_CPT_HC_S1T",
+                      "planPartId": 224,
+                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_HC_S1T",
+                      "startDate": "2023-12-15 11:02:13.328",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2023-12-15 11:02:13.226",
+                  "parentId": 222,
+                  "partJobPrms": [],
+                  "partRequestId": "1702634485016_N1CX6",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_Kinaxis_CPT_HC_S1T",
+                  "planPartId": 223,
+                  "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Transform_HC_S1T",
+                  "startDate": "2023-12-15 11:01:25.041",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2023-12-15 11:01:24.942",
+              "parentId": 221,
+              "partJobPrms": [],
+              "partRequestId": "1702634458473_uy0sb",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_Kinaxis_CPT_HC_S1T",
+              "planPartId": 222,
+              "planPartTaskId": "D_task_Generic_Kinaxis_CIFS_TO_NFS_SFTP_HC_S1T",
+              "startDate": "2023-12-15 11:00:58.493",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2023-12-15 11:00:58.419",
+          "partJobPrms": [],
+          "partRequestId": "1702634400162_j5uzo",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_Kinaxis_CPT_HC_S1T",
+          "planPartId": 221,
+          "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Extract_HC_S1T",
+          "startDate": "2023-12-15 11:00:00.198",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1702634400070_b9VPR",
+        "status": "STOPPED"
+      },
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 211,
+        "label": "Q_plan_Generic_CurrencyConversion_Q13",
+        "pauseOnError": "false",
+        "planId": 1422,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-07 05:11:46.337",
+                      "parentId": 303,
+                      "partJobPrms": [],
+                      "partRequestId": "1707278478650_CeaEc",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Generic_CurrencyConversion_Q13",
+                      "planPartId": 304,
+                      "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CurrencyConversion_PT_Q13",
+                      "startDate": "2024-02-07 05:01:18.666",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 05:01:18.59",
+                  "parentId": 302,
+                  "partJobPrms": [],
+                  "partRequestId": "1707278454484_Qxc8N",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Generic_CurrencyConversion_Q13",
+                  "planPartId": 303,
+                  "planPartTaskId": "Q_task_Generic_SAPECC_Transform_000_CurrencyConversion_PT_Q13",
+                  "startDate": "2024-02-07 05:00:54.5",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 05:00:54.436",
+              "parentId": 301,
+              "partJobPrms": [],
+              "partRequestId": "1707278430329_rjEm7",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_CurrencyConversion_Q13",
+              "planPartId": 302,
+              "planPartTaskId": "Q_task_Generic_SAPECC_CIFS_To_NFS_000_CurrencyConversion_PT_Q13",
+              "startDate": "2024-02-07 05:00:30.348",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 05:00:30.274",
+          "partJobPrms": [],
+          "partRequestId": "1707278400155_pd4VR",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_CurrencyConversion_Q13",
+          "planPartId": 301,
+          "planPartTaskId": "Q_task_Generic_SAPECC_Extract_000_CurrencyConversion_PT_Q13",
+          "startDate": "2024-02-07 05:00:00.181",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707278400077_qN5uv",
+        "status": "STOPPED"
+      },
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 195,
+        "label": "D_plan_Generic_CurrencyConversion_Q6B",
+        "pauseOnError": "false",
+        "planId": 1281,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-05 07:11:40.917",
+                      "parentId": 263,
+                      "partJobPrms": [],
+                      "partRequestId": "1707112872596_YCF2I",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_CurrencyConversion_Q6B",
+                      "planPartId": 264,
+                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_CurrencyConversion_CPT_Q6B",
+                      "startDate": "2024-02-05 07:01:12.615",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-05 07:01:12.542",
+                  "parentId": 262,
+                  "partJobPrms": [],
+                  "partRequestId": "1707112848449_XkqxI",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_CurrencyConversion_Q6B",
+                  "planPartId": 263,
+                  "planPartTaskId": "D_task_Generic_SAPECC_Transform_000_CurrencyConversion_CPT_Q6B",
+                  "startDate": "2024-02-05 07:00:48.465",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-05 07:00:48.396",
+              "parentId": 261,
+              "partJobPrms": [],
+              "partRequestId": "1707112824291_DzPVh",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_CurrencyConversion_Q6B",
+              "planPartId": 262,
+              "planPartTaskId": "D_task_Generic_SAPECC_CIFS_To_NFS_000_CurrencyConversion_CPT_Q6B",
+              "startDate": "2024-02-05 07:00:24.316",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-05 07:00:24.236",
+          "partJobPrms": [],
+          "partRequestId": "1707112800138_3rDYw",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_CurrencyConversion_Q6B",
+          "planPartId": 261,
+          "planPartTaskId": "D_task_Generic_SAPECC_Extract_000_CurrencyConversion_CPT_Q6B",
+          "startDate": "2024-02-05 07:00:00.162",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707112800061_hlFR2",
+        "status": "STOPPED"
+      },
+      {
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 984,
+        "label": "Exec_Plan_Test_Parallel",
+        "pauseOnError": "false",
+        "planId": 3581,
+        "planParts": {
+          "childParts": [
+            {
+              "parentId": 909,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Test_Parallel",
+              "planPartId": 910,
+              "planPartTaskId": "D_task_Admin_Generate_Encrypted_Password",
+              "useParalle": false
+            },
+            {
+              "parentId": 909,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Test_Parallel",
+              "planPartId": 911,
+              "planPartTaskId": "D_task_Admin_mc4_Archive_Files",
+              "useParalle": false
+            },
+            {
+              "parentId": 909,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Test_Parallel",
+              "planPartId": 912,
+              "planPartTaskId": "D_task_Admin_load_Contexts",
+              "useParalle": false
+            },
+            {
+              "parentId": 909,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Test_Parallel",
+              "planPartId": 913,
+              "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive",
+              "useParalle": false
+            }
+          ],
+          "partJobPrms": [],
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Exec_Plan_Test_Parallel",
+          "planPartId": 909,
+          "useParalle": true
+        },
+        "planPrms": [],
+        "status": "STOPPED"
+      },
+      {
+        "desc": "Sekar [2023-10-27]",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 743,
+        "label": "P_plan_Generic_Kinaxis_CPT_BT_PC4",
+        "pauseOnError": "false",
+        "planId": 2506,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "endDate": "2023-11-29 03:31:37.861",
+                          "parentId": 444,
+                          "partJobPrms": [],
+                          "partRequestId": "1701224150724_SrgB0",
+                          "partStatus": "ON_OK_ENDED",
+                          "partType": "ON_OK",
+                          "planId": "P_plan_Generic_Kinaxis_CPT_BT_PC4",
+                          "planPartId": 501,
+                          "planPartTaskId": "P_task_Generic_SAPECC_Rapid_Response_SFTP_BT_PC4_PRD05",
+                          "startDate": "2023-11-29 03:15:50.741",
+                          "useParalle": false
+                        }
+                      ],
+                      "endDate": "2023-11-29 03:15:50.673",
+                      "parentId": 443,
+                      "partJobPrms": [],
+                      "partRequestId": "1701223350317_CRWaD",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "P_plan_Generic_Kinaxis_CPT_BT_PC4",
+                      "planPartId": 444,
+                      "planPartTaskId": "P_task_Generic_Kinaxis_SAPECC_Transform_BT_PC4",
+                      "startDate": "2023-11-29 03:02:30.334",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2023-11-29 03:02:30.255",
+                  "parentId": 442,
+                  "partJobPrms": [],
+                  "partRequestId": "1701223286059_pcILa",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "P_plan_Generic_Kinaxis_CPT_BT_PC4",
+                  "planPartId": 443,
+                  "planPartTaskId": "P_task_Custom_SAPECC_RemoveLeading_Zeroes_BT_PC4",
+                  "startDate": "2023-11-29 03:01:26.076",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2023-11-29 03:01:25.996",
+              "parentId": 441,
+              "partJobPrms": [],
+              "partRequestId": "1701223169640_vcJN8",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "P_plan_Generic_Kinaxis_CPT_BT_PC4",
+              "planPartId": 442,
+              "planPartTaskId": "P_task_Generic_CIFS_TO_NFS_SFTP_BT_PC4",
+              "startDate": "2023-11-29 02:59:29.656",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2023-11-29 02:59:29.589",
+          "partJobPrms": [],
+          "partRequestId": "1701212460118_Skexa",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "P_plan_Generic_Kinaxis_CPT_BT_PC4",
+          "planPartId": 441,
+          "planPartTaskId": "P_task_Generic_Kinaxis_SAPECC_Extract_BT_PC4",
+          "startDate": "2023-11-29 00:01:00.141",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1701212460050_RcDam",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "RawHDA - HC_T1T",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 754,
+        "label": "D_plan_Kinaxis_CPT_rawHDA_HC_T1T",
+        "pauseOnError": "false",
+        "planId": 2530,
+        "planParts": {
+          "childParts": [
+            {
+              "endDate": "2024-02-07 05:11:02.147",
+              "parentId": 467,
+              "partJobPrms": [],
+              "partRequestId": "1707278436372_DMmuB",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Kinaxis_CPT_rawHDA_HC_T1T",
+              "planPartId": 468,
+              "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_HC_T1T_rawHDA",
+              "startDate": "2024-02-07 05:00:36.386",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 05:00:36.32",
+          "partJobPrms": [],
+          "partRequestId": "1707278400176_GRnNw",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Kinaxis_CPT_rawHDA_HC_T1T",
+          "planPartId": 467,
+          "planPartTaskId": "D_task_rawHDA_000_SAPECC_Extract_RedLake_HC_T1T",
+          "startDate": "2024-02-07 05:00:00.196",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707278400091_ZzGkK",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "CPT/Q8B",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 773,
+        "label": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+        "pauseOnError": "false",
+        "planId": 2663,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "childParts": [
+                            {
+                              "endDate": "2024-02-07 11:05:49.777",
+                              "parentId": 701,
+                              "partJobPrms": [],
+                              "partRequestId": "1707300325671_8m6dw",
+                              "partStatus": "ON_OK_ENDED",
+                              "partType": "ON_OK",
+                              "planId": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+                              "planPartId": 604,
+                              "planPartTaskId": "Q_task_Admin_Q8B_Archive_Files",
+                              "startDate": "2024-02-07 11:05:25.688",
+                              "useParalle": false
+                            }
+                          ],
+                          "endDate": "2024-02-07 11:05:25.612",
+                          "parentId": 524,
+                          "partJobPrms": [],
+                          "partRequestId": "1707300237290_lx9Pa",
+                          "partStatus": "ON_OK_ENDED",
+                          "partType": "ON_OK",
+                          "planId": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+                          "planPartId": 701,
+                          "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CPT_Q8B_RR_DEV",
+                          "startDate": "2024-02-07 11:03:57.324",
+                          "useParalle": false
+                        }
+                      ],
+                      "endDate": "2024-02-07 11:03:57.158",
+                      "parentId": 523,
+                      "partJobPrms": [],
+                      "partRequestId": "1707300140810_lzVcr",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+                      "planPartId": 524,
+                      "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CPT_Q8B",
+                      "startDate": "2024-02-07 11:02:20.831",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 11:02:20.75",
+                  "parentId": 522,
+                  "partJobPrms": [],
+                  "partRequestId": "1707300092566_npkEm",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+                  "planPartId": 523,
+                  "planPartTaskId": "Q_task_Generic_Kinaxis_SAPECC_Transform_CPT_Q8B",
+                  "startDate": "2024-02-07 11:01:32.584",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 11:01:32.511",
+              "parentId": 521,
+              "partJobPrms": [],
+              "partRequestId": "1707300068404_PPT8u",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+              "planPartId": 522,
+              "planPartTaskId": "Q_task_Generic_CIFS_TO_NFS_SFTP_CPT_Q8B",
+              "startDate": "2024-02-07 11:01:08.419",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 11:01:08.352",
+          "partJobPrms": [],
+          "partRequestId": "1707300000114_Rd7O8",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_Kinaxis_CPT_CPT_Q8B",
+          "planPartId": 521,
+          "planPartTaskId": "Q_task_Generic_Kinaxis_SAPECC_Extract_CPT_Q8B",
+          "startDate": "2024-02-07 11:00:00.132",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707300000056_wRog5",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "Execution plan_HC T1T aslaha updated 03 Jan",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 748,
+        "label": "D_plan_Generic_Kinaxis_CPT_HC_T1T",
+        "pauseOnError": "false",
+        "planId": 2524,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-07 07:58:07.16",
+                      "parentId": 463,
+                      "partJobPrms": [],
+                      "partRequestId": "1707288414717_rPd9w",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_Kinaxis_CPT_HC_T1T",
+                      "planPartId": 464,
+                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_HC_T1T",
+                      "startDate": "2024-02-07 07:46:54.734",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 07:46:54.662",
+                  "parentId": 462,
+                  "partJobPrms": [],
+                  "partRequestId": "1707288372513_H86Q2",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_Kinaxis_CPT_HC_T1T",
+                  "planPartId": 463,
+                  "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Transform_HC_T1T",
+                  "startDate": "2024-02-07 07:46:12.531",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 07:46:12.453",
+              "parentId": 461,
+              "partJobPrms": [],
+              "partRequestId": "1707288346331_a9ZvW",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_Kinaxis_CPT_HC_T1T",
+              "planPartId": 462,
+              "planPartTaskId": "D_task_Generic_CIFS_TO_NFS_SFTP_HC_T1T",
+              "startDate": "2024-02-07 07:45:46.346",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 07:45:46.272",
+          "partJobPrms": [],
+          "partRequestId": "1707288300112_F4n4q",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_Kinaxis_CPT_HC_T1T",
+          "planPartId": 461,
+          "planPartTaskId": "D_task_Generic_Kinaxis_SAPECC_Extract_HC_T1T",
+          "startDate": "2024-02-07 07:45:00.13",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707288300044_sfeQG",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "RawHDA - HC_S1T",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 753,
+        "label": "Q_plan_Kinaxis_CPT_rawHDA_HC_S1T",
+        "pauseOnError": "false",
+        "planId": 2529,
+        "planParts": {
+          "childParts": [
+            {
+              "parentId": 465,
+              "partJobPrms": [],
+              "partStatus": "ON_OK",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Kinaxis_CPT_rawHDA_HC_S1T",
+              "planPartId": 466,
+              "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_HC_S1T_rawHDA",
+              "useParalle": false
+            }
+          ],
+          "partJobPrms": [],
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Kinaxis_CPT_rawHDA_HC_S1T",
+          "planPartId": 465,
+          "planPartTaskId": "D_task_rawHDA_010_SAPECC_Extract_RedLake_HC_S1T",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "status": "STOPPED"
+      },
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 708,
+        "label": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+        "pauseOnError": "false",
+        "planId": 2423,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "childParts": [
+                            {
+                              "parentId": 907,
+                              "partJobPrms": [],
+                              "partStatus": "ON_OK",
+                              "partType": "ON_OK",
+                              "planId": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+                              "planPartId": 908,
+                              "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_BT_QC4_QA005",
+                              "useParalle": false
+                            }
+                          ],
+                          "parentId": 906,
+                          "partJobPrms": [],
+                          "partStatus": "ON_OK",
+                          "partType": "ON_OK",
+                          "planId": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+                          "planPartId": 907,
+                          "planPartTaskId": "Q_task_Generic_Kinaxis_SAPECC_Transform_BT_QC4",
+                          "useParalle": false
+                        }
+                      ],
+                      "parentId": 905,
+                      "partJobPrms": [],
+                      "partStatus": "ON_OK",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+                      "planPartId": 906,
+                      "planPartTaskId": "Q_task_Custom_SAPECC_RemoveLeading_Zeroes_BT_QC4",
+                      "useParalle": false
+                    }
+                  ],
+                  "parentId": 402,
+                  "partJobPrms": [],
+                  "partStatus": "ON_OK",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+                  "planPartId": 905,
+                  "planPartTaskId": "Q_task_Generic_CIFS_TO_NFS_SFTP_BT_QC4",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-01-12 15:09:18.993",
+              "parentId": 401,
+              "partJobPrms": [],
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+              "planPartId": 402,
+              "planPartTaskId": "Q_task_Generic_Kinaxis_SAPECC_Extract_BT_QC4",
+              "startDate": "2024-01-12 15:08:34.83",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-01-12 14:08:34.752",
+          "partJobPrms": [],
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_Kinaxis_CPT_BT_QC4",
+          "planPartId": 401,
+          "planPartTaskId": "P_task_Custom_SAPECC_PC4_RawHDA_Transfer_BT_QC4",
+          "startDate": "2024-01-12 08:55:14.084",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1705042513658_vE0BY",
+        "status": "STOPPED"
+      },
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 913,
+        "label": "Q_plan_Generic_CurrencyConversion_QC4",
+        "pauseOnError": "false",
+        "planId": 3327,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-07 07:11:38.589",
+                      "parentId": 747,
+                      "partJobPrms": [],
+                      "partRequestId": "1707285672622_djjoS",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Generic_CurrencyConversion_QC4",
+                      "planPartId": 748,
+                      "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CurrencyConversion_BT_QC4",
+                      "startDate": "2024-02-07 07:01:12.641",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 07:01:12.561",
+                  "parentId": 746,
+                  "partJobPrms": [],
+                  "partRequestId": "1707285648460_CQejd",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Generic_CurrencyConversion_QC4",
+                  "planPartId": 747,
+                  "planPartTaskId": "Q_task_Generic_SAPECC_Transform_000_CurrencyConversion_BT_QC4",
+                  "startDate": "2024-02-07 07:00:48.477",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 07:00:48.405",
+              "parentId": 745,
+              "partJobPrms": [],
+              "partRequestId": "1707285624315_m7AK0",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_CurrencyConversion_QC4",
+              "planPartId": 746,
+              "planPartTaskId": "Q_task_Generic_SAPECC_CIFS_To_NFS_000_CurrencyConversion_BT_QC4",
+              "startDate": "2024-02-07 07:00:24.33",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 07:00:24.258",
+          "partJobPrms": [],
+          "partRequestId": "1707285600155_AcIrt",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_CurrencyConversion_QC4",
+          "planPartId": 745,
+          "planPartTaskId": "Q_task_Generic_SAPECC_Extract_000_CurrencyConversion_BT_QC4",
+          "startDate": "2024-02-07 07:00:00.179",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707285600073_Sy1L9",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "MMSA Closed loop for Q2A",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 946,
+        "label": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q2A",
+        "pauseOnError": "false",
+        "planId": 3462,
+        "planParts": {
+          "childParts": [
+            {
+              "endDate": "2024-02-07 09:35:44.53",
+              "parentId": 801,
+              "partJobPrms": [],
+              "partRequestId": "1707294922405_FOxTB",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q2A",
+              "planPartId": 802,
+              "planPartTaskId": "Q_task_Generic_SAP_HANA_ODATA_MMSA_POST_API_AA_Q2A",
+              "startDate": "2024-02-07 09:35:22.425",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 09:35:22.308",
+          "partJobPrms": [],
+          "partRequestId": "1707294900172_xINF0",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_Kinaxis_Closed_Loop_CPT_Q2A",
+          "planPartId": 801,
+          "planPartTaskId": "Q_task_Generic_SAP_HANA_ODATA_MMSA_Payload_File_Creation_AA_Q2A",
+          "startDate": "2024-02-07 09:35:00.193",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707294900100_V0PVN",
+        "status": "STOPPED"
+      },
+      {
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 985,
+        "label": "Exec_Plan_Test_Seq",
+        "pauseOnError": "false",
+        "planId": 3582,
+        "planParts": {
+          "childParts": [
+            {
+              "parentId": 914,
+              "partJobPrms": [],
+              "partStatus": "ON_OK",
+              "partType": "ON_OK",
+              "planId": "Exec_Plan_Test_Seq",
+              "planPartId": 915,
+              "planPartTaskId": "D_task_Admin_Q6B_Archive_Files",
+              "useParalle": false
+            },
+            {
+              "parentId": 914,
+              "partJobPrms": [],
+              "partStatus": "ON_ERROR",
+              "partType": "ON_ERROR",
+              "planId": "Exec_Plan_Test_Seq",
+              "planPartId": 917,
+              "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive",
+              "useParalle": false
+            }
+          ],
+          "partJobPrms": [],
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Exec_Plan_Test_Seq",
+          "planPartId": 914,
+          "planPartTaskId": "D_task_Admin_load_Contexts",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "status": "STOPPED"
+      },
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 912,
+        "label": "D_plan_Generic_CurrencyConversion_MC4",
+        "pauseOnError": "false",
+        "planId": 3326,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-07 06:41:44.677",
+                      "parentId": 743,
+                      "partJobPrms": [],
+                      "partRequestId": "1707283878623_PHyqk",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "D_plan_Generic_CurrencyConversion_MC4",
+                      "planPartId": 749,
+                      "planPartTaskId": "D_task_Generic_SAPECC_Rapid_Response_SFTP_CurrencyConversion_BT_MC4",
+                      "startDate": "2024-02-07 06:31:18.638",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 06:31:18.566",
+                  "parentId": 742,
+                  "partJobPrms": [],
+                  "partRequestId": "1707283854462_GLFgr",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "D_plan_Generic_CurrencyConversion_MC4",
+                  "planPartId": 743,
+                  "planPartTaskId": "D_task_Generic_SAPECC_Transform_000_CurrencyConversion_BT_MC4",
+                  "startDate": "2024-02-07 06:30:54.478",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 06:30:54.416",
+              "parentId": 741,
+              "partJobPrms": [],
+              "partRequestId": "1707283830324_erpXg",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Generic_CurrencyConversion_MC4",
+              "planPartId": 742,
+              "planPartTaskId": "D_task_Generic_SAPECC_CIFS_To_NFS_000_CurrencyConversion_BT_MC4",
+              "startDate": "2024-02-07 06:30:30.339",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 06:30:30.272",
+          "partJobPrms": [],
+          "partRequestId": "1707283800136_US9Gd",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Generic_CurrencyConversion_MC4",
+          "planPartId": 741,
+          "planPartTaskId": "D_task_Generic_SAPECC_Extract_000_CurrencyConversion_BT_MC4",
+          "startDate": "2024-02-07 06:30:00.157",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707283800053_Qs2Ge",
+        "status": "STOPPED"
+      },
+      {
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 986,
+        "label": "Exec_Plan_Seq_Complex",
+        "pauseOnError": "false",
+        "planId": 3583,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "parentId": 922,
+                  "partJobPrms": [],
+                  "partStatus": "ON_ERROR",
+                  "partType": "ON_ERROR",
+                  "planId": "Exec_Plan_Seq_Complex",
+                  "planPartId": 923,
+                  "planPartTaskId": "D_task_Admin_xtt_Archive_Files",
+                  "useParalle": false
+                }
+              ],
+              "parentId": 918,
+              "partJobPrms": [],
+              "partStatus": "ON_OK",
+              "partType": "ON_OK",
+              "planId": "Exec_Plan_Seq_Complex",
+              "planPartId": 922,
+              "planPartTaskId": "D_task_Admin_mc4_Archive_Files",
+              "useParalle": false
+            },
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "parentId": 925,
+                      "partJobPrms": [],
+                      "partStatus": "PARALLEL",
+                      "partType": "PARALLEL",
+                      "planId": "Exec_Plan_Seq_Complex",
+                      "planPartId": 926,
+                      "planPartTaskId": "D_task_Admin_Q6B_Archive_Files",
+                      "useParalle": false
+                    },
+                    {
+                      "parentId": 925,
+                      "partJobPrms": [],
+                      "partStatus": "PARALLEL",
+                      "partType": "PARALLEL",
+                      "planId": "Exec_Plan_Seq_Complex",
+                      "planPartId": 927,
+                      "planPartTaskId": "D_task_Admin_xtt_Archive_Files",
+                      "useParalle": false
+                    }
+                  ],
+                  "parentId": 924,
+                  "partJobPrms": [],
+                  "partStatus": "ON_OK",
+                  "partType": "ON_OK",
+                  "planId": "Exec_Plan_Seq_Complex",
+                  "planPartId": 925,
+                  "useParalle": true
+                },
+                {
+                  "childParts": [
+                    {
+                      "parentId": 928,
+                      "partJobPrms": [],
+                      "partStatus": "PARALLEL",
+                      "partType": "PARALLEL",
+                      "planId": "Exec_Plan_Seq_Complex",
+                      "planPartId": 930,
+                      "planPartTaskId": "D_task_Generic_Kinaxis_AuthTest",
+                      "useParalle": false
+                    },
+                    {
+                      "parentId": 928,
+                      "partJobPrms": [],
+                      "partStatus": "PARALLEL",
+                      "partType": "PARALLEL",
+                      "planId": "Exec_Plan_Seq_Complex",
+                      "planPartId": 929,
+                      "planPartTaskId": "D_task_Generic_CIFS_TO_NFS_SFTP_TT_XTT",
+                      "useParalle": false
+                    }
+                  ],
+                  "parentId": 924,
+                  "partJobPrms": [],
+                  "partStatus": "ON_ERROR",
+                  "partType": "ON_ERROR",
+                  "planId": "Exec_Plan_Seq_Complex",
+                  "planPartId": 928,
+                  "useParalle": true
+                }
+              ],
+              "parentId": 918,
+              "partJobPrms": [],
+              "partStatus": "ON_ERROR",
+              "partType": "ON_ERROR",
+              "planId": "Exec_Plan_Seq_Complex",
+              "planPartId": 924,
+              "planPartTaskId": "D_task_Admin_x13_Cleanup_Archive",
+              "useParalle": false
+            },
+            {
+              "parentId": 918,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Seq_Complex",
+              "planPartId": 920,
+              "planPartTaskId": "D_task_Admin_mc4_Cleanup_Archive",
+              "useParalle": false
+            },
+            {
+              "parentId": 918,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Seq_Complex",
+              "planPartId": 919,
+              "planPartTaskId": "D_task_Custom_Kinaxis_SAPECC_Transform_Part_BT_MC4",
+              "useParalle": false
+            },
+            {
+              "parentId": 918,
+              "partJobPrms": [],
+              "partStatus": "PARALLEL",
+              "partType": "PARALLEL",
+              "planId": "Exec_Plan_Seq_Complex",
+              "planPartId": 921,
+              "planPartTaskId": "D_task_Admin_x39_Cleanup_Archive",
+              "useParalle": false
+            }
+          ],
+          "partJobPrms": [],
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Exec_Plan_Seq_Complex",
+          "planPartId": 918,
+          "useParalle": true
+        },
+        "planPrms": [],
+        "status": "STOPPED"
+      },
+      {
+        "desc": "Aslaah Jan 11 SAPECC Demandplanning",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 927,
+        "label": "Q_plan_Generic_Kinaxis_CPT_HC_Q1T",
+        "pauseOnError": "false",
+        "planId": 3349,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "endDate": "2024-02-07 08:23:24.776",
+                      "parentId": 763,
+                      "partJobPrms": [],
+                      "partRequestId": "1707289928864_6WIvA",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Generic_Kinaxis_CPT_HC_Q1T",
+                      "planPartId": 764,
+                      "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_HC_Q1T",
+                      "startDate": "2024-02-07 08:12:08.88",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 08:12:08.806",
+                  "parentId": 762,
+                  "partJobPrms": [],
+                  "partRequestId": "1707289876606_STCPk",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Generic_Kinaxis_CPT_HC_Q1T",
+                  "planPartId": 763,
+                  "planPartTaskId": "Q_task_Generic_Kinaxis_SAPECC_Transform_HC_Q1T",
+                  "startDate": "2024-02-07 08:11:16.626",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 08:11:16.551",
+              "parentId": 761,
+              "partJobPrms": [],
+              "partRequestId": "1707289852448_cBYXt",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Generic_Kinaxis_CPT_HC_Q1T",
+              "planPartId": 762,
+              "planPartTaskId": "Q_task_Generic_CIFS_TO_NFS_SFTP_HC_Q1T",
+              "startDate": "2024-02-07 08:10:52.468",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 08:10:52.364",
+          "partJobPrms": [],
+          "partRequestId": "1707289800125_Nsi44",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Generic_Kinaxis_CPT_HC_Q1T",
+          "planPartId": 761,
+          "planPartTaskId": "Q_task_Generic_Kinaxis_SAPECC_Extract_HC_Q1T",
+          "startDate": "2024-02-07 08:10:00.146",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707289800053_M5fz3",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "aslaha Jan 11 RawHDA",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 928,
+        "label": "Q_plan_Kinaxis_CPT_rawHDA_HC_Q1T",
+        "pauseOnError": "false",
+        "planId": 3350,
+        "planParts": {
+          "childParts": [
+            {
+              "endDate": "2024-02-07 05:40:54.056",
+              "parentId": 765,
+              "partJobPrms": [],
+              "partRequestId": "1707280228255_VJdug",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Kinaxis_CPT_rawHDA_HC_Q1T",
+              "planPartId": 766,
+              "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_HC_Q1T_rawHDA",
+              "startDate": "2024-02-07 05:30:28.27",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 05:30:28.204",
+          "partJobPrms": [],
+          "partRequestId": "1707280200106_l9ZtJ",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Kinaxis_CPT_rawHDA_HC_Q1T",
+          "planPartId": 765,
+          "planPartTaskId": "Q_task_rawHDA_000_SAPECC_Extract_RedLake_HC_Q1T",
+          "startDate": "2024-02-07 05:30:00.124",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707280200046_EvfNU",
+        "status": "STOPPED"
+      },
+      {
+        "desc": "CPT/Q8B",
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 832,
+        "label": "Q_plan_Kinaxis_CPT_rawHDA_Q8B",
+        "pauseOnError": "false",
+        "planId": 3021,
+        "planParts": {
+          "childParts": [
+            {
+              "childParts": [
+                {
+                  "childParts": [
+                    {
+                      "childParts": [
+                        {
+                          "endDate": "2024-02-07 06:12:21.254",
+                          "parentId": 544,
+                          "partJobPrms": [],
+                          "partRequestId": "1707282109365_HTDpP",
+                          "partStatus": "ON_OK_ENDED",
+                          "partType": "ON_OK",
+                          "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q8B",
+                          "planPartId": 561,
+                          "planPartTaskId": "Q_task_Generic_SAPECC_Rapid_Response_SFTP_CPT_Q8B_rawHDA",
+                          "startDate": "2024-02-07 06:01:49.382",
+                          "useParalle": false
+                        }
+                      ],
+                      "endDate": "2024-02-07 06:01:49.309",
+                      "parentId": 543,
+                      "partJobPrms": [],
+                      "partRequestId": "1707282085193_SMpN4",
+                      "partStatus": "ON_OK_ENDED",
+                      "partType": "ON_OK",
+                      "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q8B",
+                      "planPartId": 544,
+                      "planPartTaskId": "Q_task_rawHDA_020_SAPECC_CalculateNetPrice_CPT_Q8B",
+                      "startDate": "2024-02-07 06:01:25.21",
+                      "useParalle": false
+                    }
+                  ],
+                  "endDate": "2024-02-07 06:01:25.137",
+                  "parentId": 542,
+                  "partJobPrms": [],
+                  "partRequestId": "1707282054491_6r5wD",
+                  "partStatus": "ON_OK_ENDED",
+                  "partType": "ON_OK",
+                  "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q8B",
+                  "planPartId": 543,
+                  "planPartTaskId": "Q_task_rawHDA_000_SAPECC_Extract_RedLake_CPT_Q8B",
+                  "startDate": "2024-02-07 06:00:54.509",
+                  "useParalle": false
+                }
+              ],
+              "endDate": "2024-02-07 06:00:54.425",
+              "parentId": 541,
+              "partJobPrms": [],
+              "partRequestId": "1707282026308_OA28n",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q8B",
+              "planPartId": 542,
+              "planPartTaskId": "Q_task_Generic_CIFS_TO_NFS_SFTP_CPT_Q8B",
+              "startDate": "2024-02-07 06:00:26.326",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 06:00:26.242",
+          "partJobPrms": [],
+          "partRequestId": "1707282000130_naZv8",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Kinaxis_CPT_rawHDA_Q8B",
+          "planPartId": 541,
+          "planPartTaskId": "Q_task_rawHDA_000_SAPECC_Extract_CPT_Q8B",
+          "startDate": "2024-02-07 06:00:00.147",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707282000071_1skh6",
+        "status": "STOPPED"
+      },
+      {
+        "errorStatus": "OK",
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 840,
+        "label": "D_plan_Custom_APO_Material_Forecast_HC_QAU",
+        "pauseOnError": "false",
+        "planId": 3061,
+        "planParts": {
+          "childParts": [
+            {
+              "endDate": "2024-02-07 09:45:25.336",
+              "parentId": 581,
+              "partJobPrms": [],
+              "partRequestId": "1707294051913_NBbEB",
+              "partStatus": "ON_OK_ENDED",
+              "partType": "ON_OK",
+              "planId": "D_plan_Custom_APO_Material_Forecast_HC_QAU",
+              "planPartId": 582,
+              "planPartTaskId": "D_task_Custom_SAP_HANA_ODATA_APO_Post_API_HC_QAU",
+              "startDate": "2024-02-07 09:20:51.941",
+              "useParalle": false
+            }
+          ],
+          "endDate": "2024-02-07 09:20:51.85",
+          "partJobPrms": [],
+          "partRequestId": "1707292800114_lRBp7",
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "D_plan_Custom_APO_Material_Forecast_HC_QAU",
+          "planPartId": 581,
+          "planPartTaskId": "D_task_Custom_SAP_HANA_ODATA_APO_Payload_File_Creation_HC_QAU",
+          "startDate": "2024-02-07 09:00:00.138",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "requestId": "1707292800052_o039n",
+        "status": "STOPPED"
+      },
+      {
+        "execPlanTimeOut": 0,
+        "idQuartzJob": 979,
+        "label": "Q_plan_Custom_APO_Material_Forecast_HC_QAU",
+        "pauseOnError": "false",
+        "planId": 3576,
+        "planParts": {
+          "childParts": [
+            {
+              "parentId": 901,
+              "partJobPrms": [],
+              "partStatus": "ON_OK",
+              "partType": "ON_OK",
+              "planId": "Q_plan_Custom_APO_Material_Forecast_HC_QAU",
+              "planPartId": 902,
+              "planPartTaskId": "Q_task_Custom_SAP_HANA_ODATA_APO_Post_API_HC_QAU",
+              "useParalle": false
+            }
+          ],
+          "partJobPrms": [],
+          "partStatus": "NONE",
+          "partType": "NONE",
+          "planId": "Q_plan_Custom_APO_Material_Forecast_HC_QAU",
+          "planPartId": 901,
+          "planPartTaskId": "Q_task_Custom_SAP_HANA_ODATA_APO_Payload_File_Creation_HC_QAU",
+          "useParalle": false
+        },
+        "planPrms": [],
+        "status": "STOPPED"
+      }
+    ]
+  },
+  "returnCode": 0
+}
