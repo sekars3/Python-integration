@@ -1,1 +1,1 @@
-print('printing input parameter value ${params.Env}')
+print("printing input parameter value :", argv[0])

@@ -1,0 +1,99 @@
+pipeline {
+    agent any
+	environment {
+		PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\SSLTP11522\\AppData\\Local\\Programs\\Python\\Python311"
+	}
+	
+    stages {
+	
+        stage ("Plan List") {
+            steps {
+                script{
+                def jsonObj = readJSON file: 'listExecutionPlans.json'
+				def labels = jsonObj.result.ExecutionPlan.label
+				labels.each { 
+                    echo "Label ${it}"
+                    }
+                
+                }
+            }
+        }
+		stage("Checkout Code") {
+			steps {
+				script {
+					git branch: "master",
+                    credentialsId: 'jenkins-git-whook',
+                    url: 'https://github.com/sekars3/Python-integration.git'
+				}
+			}
+		}
+		
+        stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+							string(
+                                defaultValue: 'scriptcrunch', 
+                                name: 'STRING-PARAMETER', 
+                                trim: true
+                            ),
+                            [$class: 'ChoiceParameter', 
+                                choiceType: 'PT_SINGLE_SELECT', 
+                                description: 'Select the Environment from the Dropdown List', 
+                                filterLength: 1, 
+                                filterable: false, 
+                                name: 'Env', 
+                                script: [
+                                    $class: 'GroovyScript', 
+                                    fallbackScript: [
+                                        classpath: [], 
+                                        sandbox: true, 
+                                        script: 
+                                            "return['Could not get The environemnts']"
+                                    ], 
+                                    script: [
+                                        classpath: [], 
+                                        sandbox: true, 
+                                        script: 
+                                            "return['DEV','QA','PROD']"
+                                    ]
+                                ]
+                            ],
+                            [$class: 'CascadeChoiceParameter', 
+                                choiceType: 'PT_CHECKBOX', 
+                                description: 'Select the AMI from the Dropdown List',
+                                name: 'AMI List', 
+                                referencedParameters: 'Env', 
+                                script: 
+                                    [$class: 'GroovyScript', 
+                                    fallbackScript: [
+                                            classpath: [], 
+                                            sandbox: true, 
+                                            script: "return['Could not get Environment from Env Param']"
+                                            ], 
+                                    script: [
+                                            classpath: [], 
+                                            sandbox: true, 
+                                            script: '''
+											def jsonObj = readJSON file: 'listExecutionPlans.json'
+											def labels = jsonObj.result.ExecutionPlan.label
+											def list = [1,3,4,5,6,7,9]
+											return[${list}]
+                                            '''
+                                        ] 
+                                ]
+                            ]
+                        ])
+                    ])
+                }
+            }
+        }
+		stage('build') {
+			steps {
+				echo "Hello ${params.Env}"
+				bat 'python python_test.py ${params.Env}'
+			}
+		}
+	}
+}
