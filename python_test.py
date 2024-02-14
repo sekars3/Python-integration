@@ -1,1 +1,3 @@
-print('printing input parameter value ${Env}')
+import sys
+ 
+print("printing input parameter value :", sys.argv[1])
