@@ -1,1 +1,3 @@
-print("printing input parameter value :", argv[0])
+import sys
+ 
+print("printing input parameter value :", sys.argv[1])
