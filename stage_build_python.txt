@@ -1,0 +1,6 @@
+stage('build') {
+			steps {
+				echo "Hello ${params.PLAN_NAME}"
+				bat "python python_test.py ${params.PLAN_NAME} ${params.YAML_INPUT}"
+			}
+		}

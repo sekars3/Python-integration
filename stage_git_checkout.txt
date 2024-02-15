@@ -1,0 +1,10 @@
+
+		stage("Checkout Code") {
+			steps {
+				script {
+					git branch: "master",
+                    credentialsId: 'jenkins-git-whook',
+                    url: 'https://github.com/sekars3/Python-integration.git'
+				}
+			}
+		}
