@@ -11,14 +11,14 @@ with open("yaml_source.json", "w") as outfile:
 
 # Print the values as a dictionary
 # print(data)
-filename = "impEP_" + data['ep_label'] + ".json"
+filename = "impEP_" + sys.argv[3] + ".json"
 
 # Initializing planParts dictionary
 # planParts = create_plan_parts(data)
 
 planParts = create_plan_parts(data)
 
-planParts["planId"] = data['ep_label']
+planParts["planId"] = sys.argv[3]
 planParts["useParalle"] = True
 planParts["partType"] = "NONE"
 

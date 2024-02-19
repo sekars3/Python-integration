@@ -68,15 +68,7 @@ pipeline {
 			    script {
 			        def ws = "${env.WORKSPACE}"
 				    echo "Calling python code"
-				    bat '''python importExecutionPlan.py 
-						"${env.WORKSPACE}"
-						plan_details.txt
-						"${params.PLAN_NAME}"
-						"${params.PLAN_DESC}"
-						"${params.PAUSE_ON_ERROR}"
-						"${params.SCHEDULE_CHECK}"
-						"${params.SCHEDULE_EXPR}"
-					'''
+				    bat "python importExecutionPlan.py \"${env.WORKSPACE}\" plan_details.txt \"${params.PLAN_NAME}\" \"${params.PLAN_DESC}\" \"${params.PAUSE_ON_ERROR}\" \"${params.SCHEDULE_CHECK}\" \"${params.SCHEDULE_EXPR}\""
 			    }
 			}
 		}
