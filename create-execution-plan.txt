@@ -51,8 +51,11 @@ pipeline {
 		
 		stage('build') {
 			steps {
-				echo "Calling python code"
-				bat "python python_test.py"
+			    script {
+			        def ws = "${env.WORKSPACE}"
+				    echo "Calling python code"
+				    bat "python importExecutionPlan.py \"${env.WORKSPACE}\" plan_details.txt"   
+			    }
 			}
 		}
 	}
