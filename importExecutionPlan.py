@@ -24,11 +24,11 @@ planParts["partType"] = "NONE"
 
 # Plan details)
 dict_plan_det = {
-    "desc": data['ep_description'],
+    "desc": sys.argv[4],
     "execPlanRollBack": "test1",
     "execPlanTimeOut": "1000",
-    "label": data['ep_label'],
-    "pauseOnError": "true"
+    "label": sys.argv[3],
+    "pauseOnError": sys.argv[5]
 }
 
 dict_plan_det["planParts"] = planParts
