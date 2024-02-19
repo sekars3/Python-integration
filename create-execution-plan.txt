@@ -22,16 +22,32 @@ pipeline {
                 script { 
                     properties([
                         parameters([
+							string(
+                                description: 'Enter the name of the Execution Plan', 
+                                name: 'PLAN_NAME', 
+                                trim: true
+                            ),
+							string(
+                                description: 'Enter the description of the Execution Plan', 
+                                name: 'PLAN_DESC', 
+                                trim: true
+                            ),
                             choice(
-                                choices: ['ONE', 'TWO'], 
-                                name: 'PARAMETER_01'
+                                choices: ['false', 'true'], 
+                                name: 'PAUSE_ON_ERROR'
+                            ),
+                            choice(
+                                choices: ['false', 'true'], 
+                                name: 'SCHEDULE_CHECK'
+                            ),
+                            string(
+                                description: 'Enter the schedule expression', 
+                                name: 'SCHEDULE_EXPR', 
+                                trim: true
                             ),
                             text(
-                                defaultValue: '''
-                                this is a multi-line 
-                                string parameter example
-                                ''', 
-                                 name: 'PLAN_DET'
+								description: 'Enter the YAML input for the tasks from the Root level',
+                                name: 'YAML_INPUT'
                             )
 						])
 					])	
@@ -42,9 +58,7 @@ pipeline {
 		stage('write') {
 			steps {
                script {
-                   def date = new Date()
-                   def data = "Hello World\nSecond line\n" + date
-                   writeFile(file: 'plan_details.txt', text: "${params.PLAN_DET}")
+					writeFile(file: 'plan_details.txt', text: "${params.YAML_INPUT}")
                }
             }
         }
@@ -54,7 +68,15 @@ pipeline {
 			    script {
 			        def ws = "${env.WORKSPACE}"
 				    echo "Calling python code"
-				    bat "python importExecutionPlan.py \"${env.WORKSPACE}\" plan_details.txt"   
+				    bat '''python importExecutionPlan.py 
+						"${env.WORKSPACE}"
+						plan_details.txt
+						"${params.PLAN_NAME}"
+						"${params.PLAN_DESC}"
+						"${params.PAUSE_ON_ERROR}"
+						"${params.SCHEDULE_CHECK}"
+						"${params.SCHEDULE_EXPR}"
+					'''
 			    }
 			}
 		}
