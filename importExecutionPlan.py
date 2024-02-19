@@ -11,24 +11,24 @@ with open("yaml_source.json", "w") as outfile:
 
 # Print the values as a dictionary
 # print(data)
-filename = "impEP_" + sys.argv[3] + ".json"
+filename = "impEP_" + sys.argv[5] + ".json"
 
 # Initializing planParts dictionary
 # planParts = create_plan_parts(data)
 
 planParts = create_plan_parts(data)
 
-planParts["planId"] = sys.argv[3]
+planParts["planId"] = sys.argv[5]
 planParts["useParalle"] = True
 planParts["partType"] = "NONE"
 
 # Plan details)
 dict_plan_det = {
-    "desc": sys.argv[4],
+    "desc": sys.argv[6],
     "execPlanRollBack": "test1",
     "execPlanTimeOut": "1000",
-    "label": sys.argv[3],
-    "pauseOnError": sys.argv[5]
+    "label": sys.argv[5],
+    "pauseOnError": sys.argv[7]
 }
 
 dict_plan_det["planParts"] = planParts
@@ -36,8 +36,8 @@ dict_plan_det["planParts"] = planParts
 # Adding nested element
 dict_plan = {
     "actionName": "importExecutionPlan",
-    "authPass": "admin",
-    "authUser": "admin@company.com",
+    "authPass": sys.argv[4],
+    "authUser": sys.argv[3],
     "result": {"ExecutionPlan": [dict_plan_det]}
 }
 
