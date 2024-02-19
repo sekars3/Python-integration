@@ -3,8 +3,6 @@ import jenkins
 import yaml
 import json
  
-print("printing input parameter value :", sys.argv[3])
-
 jenkins = jenkins.Jenkins('http://desktop-p57l4i5:8080')
 
 workspace = jenkins.get_job(sys.argv[1]).get_workspace()

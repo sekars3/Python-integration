@@ -52,7 +52,7 @@ pipeline {
 		stage('build') {
 			steps {
 				echo "Hello ${params.PLAN_DET}"
-				bat "python python_test.py create-execution-plan plan_details.txt ${params.PLAN_DET}"
+				bat "python python_test.py create-execution-plan plan_details.txt"
 			}
 		}
 	}
