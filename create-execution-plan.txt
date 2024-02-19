@@ -1,12 +1,12 @@
 pipeline {
     agent any
-		
+	
 	environment {
 		PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\SSLTP11522\\AppData\\Local\\Programs\\Python\\Python311;C:\\Program Files\\Git\\bin\\git.exe"
 	}
 	
     stages {
-        
+        		
 		stage("Checkout Code") {
 			steps {
 				script {
@@ -51,9 +51,8 @@ pipeline {
 		
 		stage('build') {
 			steps {
-				echo "Hello ${params.PLAN_DET}"
-				def ws = pwd()
-				bat python python_test.py "${ws}" plan_details.txt'
+				echo "Calling python code"
+				bat "python python_test.py"
 			}
 		}
 	}
