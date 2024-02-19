@@ -1,12 +1,15 @@
 import sys
+import jenkins
+import yaml
+import json
  
-print("printing input parameter value :", sys.argv[1])
+print("printing input parameter value :", sys.argv[3])
 
-#open text file
-text_file = open("in_plan.yaml", "w")
-#write string to file
-n = text_file.write(sys.argv[2])
-#close file
-text_file.close()
- 
-print(n)
+jenkins = jenkins.Jenkins('http://desktop-p57l4i5:8080')
+
+workspace = jenkins.get_job(sys.argv[1]).get_workspace()
+
+with open(workspace + '/' + sys.argv[2]), 'r') as f:
+    data = yaml.load(f, Loader=yaml.SafeLoader)
+
+print(data)

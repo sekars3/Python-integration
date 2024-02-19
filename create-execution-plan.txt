@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+		
+	environment {
+		PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\SSLTP11522\\AppData\\Local\\Programs\\Python\\Python311;C:\\Program Files\\Git\\bin\\git.exe"
+	}
+	
+    stages {
+        
+		stage("Checkout Code") {
+			steps {
+				script {
+					git branch: "master",
+                    credentialsId: 'jenkins-git-whook',
+                    url: 'https://github.com/sekars3/Python-integration.git'
+				}
+			}
+		}
+		
+        stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            choice(
+                                choices: ['ONE', 'TWO'], 
+                                name: 'PARAMETER_01'
+                            ),
+                            text(
+                                defaultValue: '''
+                                this is a multi-line 
+                                string parameter example
+                                ''', 
+                                 name: 'PLAN_DET'
+                            )
+						])
+					])	
+                }
+            }
+        }
+		
+		stage('write') {
+			steps {
+               script {
+                   def date = new Date()
+                   def data = "Hello World\nSecond line\n" + date
+                   writeFile(file: 'plan_details.txt', text: "${params.PLAN_DET}")
+               }
+            }
+        }
+		
+		stage('build') {
+			steps {
+				echo "Hello ${params.PLAN_DET}"
+				bat "python python_test.py create-execution-plan plan_details.txt ${params.PLAN_DET}"
+			}
+		}
+	}
+}
