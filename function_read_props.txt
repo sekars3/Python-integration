@@ -1,0 +1,120 @@
+import com.cloudbees.groovy.cps.NonCPS
+
+@NonCPS
+def getws() {
+	Properties properties = new Properties()
+	File propertiesFile = new File('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\create-execution-plan\\plans.properties')
+	propertiesFile.withInputStream {
+		properties.load(it)
+	}
+	
+	if(Env.equals("Dev")) {
+		def array = properties.Dev.split(',')
+		echo array[1]
+	}
+	
+	if(Env.equals("QA")) {
+		def array = properties.QA.split(',')
+		echo array[2]
+	}
+	
+	else {echo array[3]}
+}
+
+pipeline {
+    agent any
+	environment {
+		PATH = "C:\\WINDOWS\\SYSTEM32;C:\\Users\\SSLTP11522\\AppData\\Local\\Programs\\Python\\Python311"
+	}
+	
+    stages {
+        
+		stage("Checkout Code") {
+			steps {
+				script {
+					git branch: "master",
+                    credentialsId: 'jenkins-git-whook',
+                    url: 'https://github.com/sekars3/Python-integration.git'
+				}
+			}
+		}
+		
+        stage('Setup parameters') {
+            steps {
+                script { 
+                    properties([
+                        parameters([
+                            [$class: 'ChoiceParameter', 
+                                choiceType: 'PT_SINGLE_SELECT', 
+                                description: 'Select the Environment',
+                                filterLength: 1, 
+                                filterable: false, 
+                                name: 'Env', 
+                                script: [
+                                    $class: 'GroovyScript', 
+                                    fallbackScript: [
+                                        classpath: [], 
+                                        sandbox: false, 
+                                        script: 
+                                            "return['Could not get The environments']"
+                                    ], 
+                                    script: [
+                                        classpath: [], 
+                                        sandbox: false, 
+                                        script: 
+                                            "return ['Dev', 'QA', 'Prod']"
+                                    ]
+                                ]
+                            ],
+							[$class: 'CascadeChoiceParameter', 
+                                choiceType: 'PT_SINGLE_SELECT', 
+                                description: 'Select the plan',
+                                name: 'Plan List', 
+                                referencedParameters: 'Env', 
+                                script: 
+                                    [$class: 'GroovyScript', 
+                                    fallbackScript: [
+                                            classpath: [], 
+                                            sandbox: false, 
+                                            script: "return['Error']"
+                                            ], 
+                                    script: [
+                                            classpath: [], 
+                                            sandbox: false, 
+                                            script: '''Properties properties = new Properties()
+												File propertiesFile = new File('plans.properties')
+												propertiesFile.withInputStream {
+													properties.load(it)
+												}
+												
+												if(Env.equals("Dev")) {
+													def array = properties.Dev.split(',')
+													return [array[0],array[1]]
+												}
+												
+												if(Env.equals("QA")) {
+													def array = properties.QA.split(',')
+													return [array[0],array[1]]
+												}
+												
+												else {return ['ERROR']}
+                                            '''
+                                        ] 
+                                ]
+                            ]
+						])
+					])	
+                }
+            }
+        }
+        
+		stage('build') {
+			steps {
+				script {
+					echo "calling func"
+					getws()
+				}
+			}
+		}
+	}
+}
