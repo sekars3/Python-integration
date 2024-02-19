@@ -22,18 +22,15 @@ pipeline {
                 script { 
                     properties([
                         parameters([
-							separator(name: "EXEC_PLAN_INFO", sectionHeader: "Execution Plan Info"),
 							string(name: 'USER_NAME', description: 'Enter the user name', trim: true),
 							password(name: 'PASSWORD', description: 'Enter the password'),
 							string(name: 'PLAN_NAME', description: 'Enter the name of the Execution Plan', trim: true),
 							string(name: 'PLAN_DESC', description: 'Enter the description of the Execution Plan', trim: true),
                             choice(name: 'PAUSE_ON_ERROR', choices: ['false', 'true']),
-							
-							separator(name: "SCHEDULE_INFO", sectionHeader: "Schedule Info"),
+						
                             choice(name: 'SCHEDULE_CHECK', choices: ['false', 'true']),
                             string(name: 'SCHEDULE_EXPR', description: 'Enter the schedule expression', trim: true),
-							
-							separator(name: "TASKS_INFO", sectionHeader: "Tasks Info"),
+						
                             text(name: 'YAML_INPUT', description: 'Enter the YAML input for the tasks from the Root level')
 						])
 					])	
